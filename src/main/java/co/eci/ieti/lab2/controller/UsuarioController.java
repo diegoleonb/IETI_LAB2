@@ -51,7 +51,7 @@ public class UsuarioController {
     public ResponseEntity<?> updateUsuario(@PathVariable("id") int id,Usuario usuario){
         if(usuarioService.existsById(id)){
             try{
-                usuarioService.update(usuario);
+                usuarioService.update(id,usuario);
                 return new ResponseEntity<>(HttpStatus.ACCEPTED);
             }
             catch(Exception e){

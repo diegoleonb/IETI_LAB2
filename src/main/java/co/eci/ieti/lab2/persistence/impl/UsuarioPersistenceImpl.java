@@ -34,7 +34,9 @@ public class UsuarioPersistenceImpl implements UsuarioPersistence{
     }
 
     public void save(Usuario usuario){
-        usuario.setId(usuarios.size());
+        if(usuarios.containsKey(usuario.getId())){
+            usuario.setId(usuarios.size());
+        }
         usuarios.put(usuario.getId(), usuario);
     }
 
@@ -42,8 +44,9 @@ public class UsuarioPersistenceImpl implements UsuarioPersistence{
         return usuarios.get(id);
     }
 
-    public void update(Usuario usuario){
-        Usuario temp = findById(usuario.getId());
+    public void update(int id, Usuario usuario){
+        Usuario temp = findById(id);
+        temp.setId(usuario.getId());
         temp.setNombre(usuario.getNombre());
         temp.setApellido(usuario.getApellido());
         temp.setEmail(usuario.getEmail());

@@ -14,7 +14,7 @@ public interface UsuarioPersistence {
 
     public Usuario findById(int id);
 
-    public void update(Usuario usuario);
+    public void update(int id, Usuario usuario);
 
     public void delete(int id);
     

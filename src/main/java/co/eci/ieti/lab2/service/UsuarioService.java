@@ -30,8 +30,8 @@ public class UsuarioService {
         return usuarioPersistence.findById(id);
     }
 
-    public void update(Usuario usuario){
-        usuarioPersistence.update(usuario);
+    public void update(int id,Usuario usuario){
+        usuarioPersistence.update(id,usuario);
     }
 
     public void delete(int id){
