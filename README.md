@@ -2,8 +2,6 @@
 
 ### IETI - Laboratorio 2
 
-### Diego Leon
-
 ####  Implementar el controlador y servicio del API REST
 
 #### Pruebas
@@ -37,3 +35,8 @@
 ![](media/delete.png)
 
 ![](media/validateDelete.png)
+
+### Integrantes:
+
+- Diego Leon
+- Jaime Castro
